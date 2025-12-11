@@ -1,0 +1,6 @@
+sphinx>=4.0
+furo
+myst-parser
+sphinx-rtd-theme
+nbsphinx
+nbsphinx_link
