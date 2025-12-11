@@ -1,0 +1,1076 @@
+1019      print("MMCV   :", mmcv.__version__, "at", mmcv.__file__)
+ 1020      print("has mmcv._ext ? ", pkgutil.find_loader("mmcv._ext") is not None)
+ 1021  except Exception as e:
+ 1022      print("MMCV import error:", repr(e))
+ 1023  PY
+ 1024  clear
+ 1025  pip uninstall mmcv -y
+ 1026  clear
+ 1027  conda deactivate
+ 1028  conda env remove -n functioning_bot
+ 1029  clear
+ 1030  ls
+ 1031  clear
+ 1032  rm -rf mmcv/
+ 1033  clear
+ 1034  ls
+ 1035  conda create -n functioning_bot python=3.10 -y
+ 1036  conda activate funcitoning_bot
+ 1037  conda activate functioning_bot
+ 1038  clear
+ 1039  python --version
+ 1040  pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+ 1041  python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.is_available()"
+ 1042  python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.is_available())"
+ 1043  python -m pip install -U pip setuptools wheel
+ 1044  python -m pip install -U openmim
+ 1045  mim --version
+ 1046  mim install mmengine
+ 1047  python -c "import mmengine; print(mmengine.__version__)"
+ 1048  pip uninstall mmcv
+ 1049  clear
+ 1050  git clone https://github.com/open-mmlab/mmcv.git
+ 1051  cd mmcv/
+ 1052  git checkout v2.1.0
+ 1053  clear
+ 1054  pip install numpy<2
+ 1055  pip uninstall numpy
+ 1056  clear
+ 1057  pip install 'numpy<2'
+ 1058  clear
+ 1059  pip install 'numpy<2'
+ 1060  ls
+ 1061  rm -rf build/ mmcv.egg-info/
+ 1062  clear
+ 1063  export CC=gcc
+ 1064  export CXX=g++
+ 1065  export CUDA_HOME=/usr/lib/nvidia-cuda-toolkit/
+ 1066  export CPATH=$CPATH:$CUDA_HOME/compute-sanitizer/include
+ 1067  export LIBRARY_PATH=$LIBRARY_PATH:$CUDA_HOME/libdevice
+ 1068  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_HOME/libdevice
+ 1069  export PATH=$CUDA_HOME/bin:$PATH
+ 1070  echo $CUDA_HOME
+ 1071  nvcc -V
+ 1072  clear
+ 1073  history
+ 1074  MMCV_WITH_OPS=1 python setup.py build_ext --inplace
+ 1075  pip install .
+ 1076  ls
+ 1077  ls build/
+ 1078  ls build/bdist.linux-x86_64/
+ 1079  ls build/lib.linux-x86_64-3.10/
+ 1080  ls build/lib.linux-x86_64-3.10/mmcv/_ext.cpython-310-x86_64-linux-gnu.so 
+ 1081  python - <<'PY'
+ 1082  import torch, mmengine, mmcv, mmdet
+ 1083  print("Torch     :", torch.__version__, "| CUDA:", torch.version.cuda, "| is_available:", torch.cuda.is_available())
+ 1084  import mmdet3d
+ 1085  print("MMEngine  :", mmengine.__version__)
+ 1086  print("MMCV      :", mmcv.__version__)
+ 1087  print("MMDet     :", mmdet.__version__)
+ 1088  print("MMDet3D   :", mmdet3d.__version__)
+ 1089  PY
+ 1090  clear
+ 1091  mim install 'mmcv<2.2.0,>=2.0.0rc4'
+ 1092  python - <<'PY'
+ 1093  import sys, numpy, matplotlib
+ 1094  print("Python     :", sys.version.split()[0])
+ 1095  print("NumPy      :", numpy.__version__)
+ 1096  print("Matplotlib :", matplotlib.__version__)
+ 1097  from matplotlib import pyplot as plt
+ 1098  print("pyplot OK")
+ 1099  import torch, mmengine, mmcv
+ 1100  print("Torch     :", torch.__version__, "| CUDA:", torch.version.cuda, "| is_available:", torch.cuda.is_available())
+ 1101  print("MMEngine  :", mmengine.__version__)
+ 1102  import pkgutil
+ 1103  try:
+ 1104      import mmcv
+ 1105      print("MMCV   :", mmcv.__version__, "at", mmcv.__file__)
+ 1106      print("has mmcv._ext ? ", pkgutil.find_loader("mmcv._ext") is not None)
+ 1107  except Exception as e:
+ 1108      print("MMCV import error:", repr(e))
+ 1109  PY
+ 1110  clear
+ 1111  python - <<'PY'
+ 1112  import torch, mmengine, mmcv, mmdet
+ 1113  print("Torch     :", torch.__version__, "| CUDA:", torch.version.cuda, "| is_available:", torch.cuda.is_available())
+ 1114  import mmdet3d
+ 1115  print("MMEngine  :", mmengine.__version__)
+ 1116  print("MMCV      :", mmcv.__version__)
+ 1117  print("MMDet     :", mmdet.__version__)
+ 1118  print("MMDet3D   :", mmdet3d.__version__)
+ 1119  PY
+ 1120  python - <<'PY'
+ 1121  import mmcv, pkgutil
+ 1122  print(mmcv.__version__)
+ 1123  print('has mmcv._ext ?', pkgutil.find_loader('mmcv.ext') is not None)
+ 1124  PY
+ 1125  python - <<'PY'
+ 1126  import sys, numpy, matplotlib
+ 1127  print("Python     :", sys.version.split()[0])
+ 1128  print("NumPy      :", numpy.__version__)
+ 1129  print("Matplotlib :", matplotlib.__version__)
+ 1130  from matplotlib import pyplot as plt
+ 1131  print("pyplot OK")
+ 1132  import torch, mmengine, mmcv
+ 1133  print("Torch     :", torch.__version__, "| CUDA:", torch.version.cuda, "| is_available:", torch.cuda.is_available())
+ 1134  print("MMEngine  :", mmengine.__version__)
+ 1135  import pkgutil
+ 1136  try:
+ 1137      import mmcv
+ 1138      print("MMCV   :", mmcv.__version__, "at", mmcv.__file__)
+ 1139      print("has mmcv._ext ? ", pkgutil.find_loader("mmcv._ext") is not None)
+ 1140  except Exception as e:
+ 1141      print("MMCV import error:", repr(e))
+ 1142  PY
+ 1143  python - <<'PY'
+ 1144  import mmcv, pkgutil
+ 1145  print(mmcv.__version__)
+ 1146  print('has mmcv._ext ?', pkgutil.find_loader('mmcv._ext') is not None)
+ 1147  PY
+ 1148  numpy --version
+ 1149  numpy -v
+ 1150  python -c 'import numpy; print(numpy.__version__)'
+ 1151  pip uninstall  numpy -y
+ 1152  pip install 'numpy<2'
+ 1153  python -c 'import numpy; print(numpy.__version__)'
+ 1154  python - <<'PY'
+ 1155  import mmcv, pkgutil
+ 1156  print(mmcv.__version__)
+ 1157  print('has mmcv._ext ?', pkgutil.find_loader('mmcv._ext') is not None)
+ 1158  PY
+ 1159  python - <<'PY'
+ 1160  import mmcv, pkgutil
+ 1161  print(mmcv.__version__)
+ 1162  print('has mmcv._ext ?', pkgutil.find_loader('mmcv._ext') is not None)
+ 1163  PY
+ 1164  python - <<'PY'
+ 1165  import sys, numpy, matplotlib
+ 1166  print("Python     :", sys.version.split()[0])
+ 1167  print("NumPy      :", numpy.__version__)
+ 1168  print("Matplotlib :", matplotlib.__version__)
+ 1169  from matplotlib import pyplot as plt
+ 1170  print("pyplot OK")
+ 1171  import torch, mmengine, mmcv
+ 1172  print("Torch     :", torch.__version__, "| CUDA:", torch.version.cuda, "| is_available:", torch.cuda.is_available())
+ 1173  print("MMEngine  :", mmengine.__version__)
+ 1174  import pkgutil
+ 1175  try:
+ 1176      import mmcv
+ 1177      print("MMCV   :", mmcv.__version__, "at", mmcv.__file__)
+ 1178      print("has mmcv._ext ? ", pkgutil.find_loader("mmcv._ext") is not None)
+ 1179  except Exception as e:
+ 1180      print("MMCV import error:", repr(e))
+ 1181  PY
+ 1182  mim install "mmdet>3.0.0,<3.3.0"
+ 1183  mim install "mmdet3d>=1.1.0"
+ 1184  python - <<'PY'
+ 1185  import torch, mmengine, mmcv, mmdet
+ 1186  print("Torch     :", torch.__version__, "| CUDA:", torch.version.cuda, "| is_available:", torch.cuda.is_available())
+ 1187  import mmdet3d
+ 1188  print("MMEngine  :", mmengine.__version__)
+ 1189  print("MMCV      :", mmcv.__version__)
+ 1190  print("MMDet     :", mmdet.__version__)
+ 1191  print("MMDet3D   :", mmdet3d.__version__)
+ 1192  PY
+ 1193  python - <<'PY'
+ 1194  import sys, pkgutil, torch
+ 1195  print("Python :", sys.version.split()[0])
+ 1196  print("Torch  :", torch.__version__, "CUDA:", torch.version.cuda, "avail:", torch.cuda.is_available())
+ 1197  try:
+ 1198      import mmcv
+ 1199      print("MMCV   :", mmcv.__version__, "at", mmcv.__file__)
+ 1200      print("has mmcv._ext ? ", pkgutil.find_loader("mmcv._ext") is not None)
+ 1201  except Exception as e:
+ 1202      print("MMCV import error:", repr(e))
+ 1203  PY
+ 1204  pip install open3d opencv-python matplotlib tqdm
+ 1205  cd ..
+ 1206  clear
+ 1207  git clone https://github.com/open-mmlab/mmdetectioned.git
+ 1208  git clone https://github.com/open-mmlab/mmdetection3d.git
+ 1209  cd mmdetection3d/
+ 1210  clear
+ 1211  ls
+ 1212  mkdir checkpoints
+ 1213  mim download mmdet3d --config pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car --dest ./checkpoints
+ 1214  ls -lh checkpoints/
+ 1215  python demo/pcd_demo.py demo/data/kitti/000008.bin checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth --out-dir demo_output
+ 1216  python - <<'PY'
+ 1217  import sys, numpy, matplotlib
+ 1218  print("Python     :", sys.version.split()[0])
+ 1219  print("NumPy      :", numpy.__version__)
+ 1220  print("Matplotlib :", matplotlib.__version__)
+ 1221  from matplotlib import pyplot as plt
+ 1222  print("pyplot OK")
+ 1223  import torch, mmengine, mmcv
+ 1224  print("Torch     :", torch.__version__, "| CUDA:", torch.version.cuda, "| is_available:", torch.cuda.is_available())
+ 1225  print("MMEngine  :", mmengine.__version__)
+ 1226  import pkgutil
+ 1227  try:
+ 1228      import mmcv
+ 1229      print("MMCV   :", mmcv.__version__, "at", mmcv.__file__)
+ 1230      print("has mmcv._ext ? ", pkgutil.find_loader("mmcv._ext") is not None)
+ 1231  except Exception as e:
+ 1232      print("MMCV import error:", repr(e))
+ 1233  PY
+ 1234  clear
+ 1235  history
+ 1236  clear
+ 1237  python demo/pcd_demo.py demo/data/kitti/000008.bin checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth --out-dir demo_output
+ 1238  python -c "import mmcv; print(mmcv.__file__)"
+ 1239  python -c "import pkgutil; print('mmcv._ext found?', pkgutil.find_loader('mmcv._ext') is not None)"
+ 1240  cd ../mmcv/
+ 1241  pip install -e . --force-reinstall --no-deps
+ 1242  python -c "import pkgutil; print('mmcv._ext found?', pkgutil.find_loader('mmcv._ext') is not None)"
+ 1243  clear
+ 1244  history
+ 1245  cd ..
+ 1246  l
+ 1247  cd mmdetection3d/
+ 1248  clear
+ 1249  ls
+ 1250  python demo/pcd_demo.py demo/data/kitti/000008.bin checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth --out-dir demo_output
+ 1251  pip uninstall numpy -y
+ 1252  pip install 'numpy<2'
+ 1253  pip uninstall matplotlib -y
+ 1254  pip install matplotlib
+ 1255  python -c "import python; matplotlib, mmcv, pkgutil; print(numpy.__version__, pkgutil.find_loader('mmcv._ext') is not None)"
+ 1256  python -c "import numpy; matplotlib, mmcv, pkgutil; print(numpy.__version__, pkgutil.find_loader('mmcv._ext') is not None)"
+ 1257  python -c "import numpy, matplotlib, mmcv, pkgutil; print(numpy.__version__, pkgutil.find_loader('mmcv._ext') is not None)"
+ 1258  clear
+ 1259  python demo/pcd_demo.py demo/data/kitti/000008.bin checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth --out-dir demo_output
+ 1260  ls
+ 1261  cd demo_output/
+ 1262  clear
+ 1263  ls
+ 1264  ls preds/
+ 1265  ls
+ 1266  cd ..
+ 1267  mim download mmdet3d --config centerpoint_pillar02_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d --dest ./checkpoints
+ 1268  ls -lh checkpoints/center*
+ 1269  python demo/pcd_demo.py demo/data/nuscenes/n015-2018-07-24-11-22-45+0800__LIDAR_TOP__1532402927647951.pcd.bin  checkpoints/centerpoint_pillar02_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py checkpoints/centerpoint_02pillar_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220811_031844-191a3822.pth --out-dir demo_output_nuscenes
+ 1270  ls -lh demo_output_nuscenes/
+ 1271  ls -lh demo_output_nuscenes/preds/
+ 1272  clear
+ 1273  cat demo_output/preds/000008.json | python -m json.tool | head -50
+ 1274  cat demo_output_nuscenes/preds/*.json | python -m json.tool | head -50
+ 1275  cat demo_output_nuscenes/preds/*.json | python -m json.tool | head -100
+ 1276  cat demo_output_nuscenes/preds/*.json | python -m json.tool | head -200
+ 1277  cat demo_output_nuscenes/preds/*.json | python -m json.tool | head -500
+ 1278  clear
+ 1279  cd ..
+ 1280  ls
+ 1281  git clone https://github.com/lkk688/DeepDataMiningLearning.git
+ 1282  cd mmdetection3d/
+ 1283  ls
+ 1284  python  mmdet3d_inference2.py --dataset kitti --input-path demo/data/kitti --model checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py --checkpoint checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth --out-dir results_kitti_full --headless --device cuda:0
+ 1285  ls demo/data/kitti/
+ 1286  cd demo/data/kitti/
+ 1287  mkdir -p velodyne image_2 calib
+ 1288  mv 000008.bin velodyne/
+ 1289  mv 000008.png image_2/
+ 1290  mv 000008.txt calib/
+ 1291  ls
+ 1292  clear
+ 1293  python  mmdet3d_inference2.py --dataset kitti --input-path demo/data/kitti --model checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py --checkpoint checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth --out-dir results_kitti_full --headless --device cuda:0
+ 1294  cd ../../../
+ 1295  python  mmdet3d_inference2.py --dataset kitti --input-path demo/data/kitti --model checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py --checkpoint checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth --out-dir results_kitti_full --headless --device cuda:0
+ 1296  cd results_kitti_full/
+ 1297  clear
+ 1298  ls
+ 1299  ls preds/
+ 1300  cd..
+ 1301  cd ..
+ 1302  clear
+ 1303  ls-lh demo/data/nuscenes/
+ 1304  ls -lh demo/data/nuscenes/
+ 1305  clear
+ 1306  ls -lh demo/data/nuscenes/
+ 1307  python mmdet3d_inference2.py --dataset any --input-path demo/data/nuscenes --model checkpoints/centerpoint_pillar02_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py --checkpoint checkpoints/centerpoint_02pillar_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220811_031844-191a3822.pth --modality lidar --out-dir results_nuscenes_full --headless --device cuda:0
+ 1308  clear
+ 1309  python mmdet3d_inference2.py --dataset any --input-path demo/data/nuscenes --model checkpoints/centerpoint_pillar02_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py --checkpoint checkpoints/centerpoint_02pillar_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220811_031844-191a3822.pth --modality lidar --out-dir results_nuscenes_full --headless --device cuda:0
+ 1310  clear
+ 1311  ls -lh results_nuscenes_full/
+ 1312  ls -lh results_nuscenes_full/preds/
+ 1313  clear
+ 1314  ls -lh open3d_view_saved_ply.py 
+ 1315  ls results_kitti_full/*ply
+ 1316  ls results_nuscenes_full/*.ply
+ 1317  clear
+ 1318  ls results_kitti_full/
+ 1319  clear
+ 1320  python open3d_view_saved_ply.py --dir results_kitti_full --basename 000008 --out results_kitti_full/kitti_screenshot.png
+ 1321  python open3d_view_saved_ply.py --dir results_kitti_full --basename 000008
+ 1322  cd results_kitti_full/
+ 1323  ls
+ 1324  ls ../results_nuscenes_full/
+ 1325  cd /usr
+ 1326  ls
+ 1327  cd local/
+ 1328  ls
+ 1329  clear
+ 1330  cd /
+ 1331  ls
+ 1332  cd home/cmpe/
+ 1333  ls
+ 1334  cd /
+ 1335  ls
+ 1336  which nvcc
+ 1337  readlink -f "$(which nvcc)"
+ 1338  cd /usr/bin/
+ 1339  ls
+ 1340  clear
+ 1341  cd nvcc
+ 1342  echo "$CUDA_HOME"
+ 1343  dpkg -l | grep -i cuda
+ 1344  ls -l
+ 1345  clear
+ 1346  which nvcc
+ 1347  readlink -f "$(which nvcc)"
+ 1348  ls -l /usr/bin/nvcc
+ 1349  cat /usr/bin/nvcc
+ 1350  cd /usr/lib/nvidia-cuda-toolkit/
+ 1351  ls
+ 1352  cd bin/
+ 1353  ls
+ 1354  ./nvcc --version
+ 1355  cd ..
+ 1356  ls
+ 1357  cd bin/
+ 1358  ls
+ 1359  cd ..
+ 1360  ls
+ 1361  cd libdevice/
+ 1362  ls
+ 1363  cd ..
+ 1364  ls compute-sanitizer/
+ 1365  ls compute-sanitizer/include/
+ 1366  clear
+ 1367  LS
+ 1368  ls
+ 1369  ls compute-sanitizer/
+ 1370  ls
+ 1371  cd ../nuscenes/
+ 1372  conda deactivate
+ 1373  clear
+ 1374  tar -xzf v1.0-mini.tgz 
+ 1375  ls
+ 1376  conda deactivate
+ 1377  clear
+ 1378  cd functioning-bot/
+ 1379  ls
+ 1380  cd 3D_Object_Detection/
+ 1381  ls
+ 1382  clear
+ 1383  ls
+ 1384  conda info
+ 1385  conda activate functioning-bot
+ 1386  conda activate functioning_bot
+ 1387  clear
+ 1388  ls
+ 1389  python - <<'PY'
+ 1390  import sys, numpy, matplotlib
+ 1391  print("Python     :", sys.version.split()[0])
+ 1392  print("NumPy      :", numpy.__version__)
+ 1393  print("Matplotlib :", matplotlib.__version__)
+ 1394  from matplotlib import pyplot as plt
+ 1395  print("pyplot OK")
+ 1396  import torch, mmengine, mmcv
+ 1397  print("Torch     :", torch.__version__, "| CUDA:", torch.version.cuda, "| is_available:", torch.cuda.is_available())
+ 1398  print("MMEngine  :", mmengine.__version__)
+ 1399  import pkgutil
+ 1400  try:
+ 1401      import mmcv
+ 1402      print("MMCV   :", mmcv.__version__, "at", mmcv.__file__)
+ 1403      print("has mmcv._ext ? ", pkgutil.find_loader("mmcv._ext") is not None)
+ 1404  except Exception as e:
+ 1405      print("MMCV import error:", repr(e))
+ 1406  PY
+ 1407  cd mm
+ 1408  cd mmcv/
+ 1409  clear
+ 1410  pip install .
+ 1411  clear
+ 1412  python - <<'PY'
+ 1413  import sys, numpy, matplotlib
+ 1414  print("Python     :", sys.version.split()[0])
+ 1415  print("NumPy      :", numpy.__version__)
+ 1416  print("Matplotlib :", matplotlib.__version__)
+ 1417  from matplotlib import pyplot as plt
+ 1418  print("pyplot OK")
+ 1419  import torch, mmengine, mmcv
+ 1420  print("Torch     :", torch.__version__, "| CUDA:", torch.version.cuda, "| is_available:", torch.cuda.is_available())
+ 1421  print("MMEngine  :", mmengine.__version__)
+ 1422  import pkgutil
+ 1423  try:
+ 1424      import mmcv
+ 1425      print("MMCV   :", mmcv.__version__, "at", mmcv.__file__)
+ 1426      print("has mmcv._ext ? ", pkgutil.find_loader("mmcv._ext") is not None)
+ 1427  except Exception as e:
+ 1428      print("MMCV import error:", repr(e))
+ 1429  PY
+ 1430  clear
+ 1431  pip uninstall numpy
+ 1432  pip install 'numpy<2'
+ 1433  python - <<'PY'
+ 1434  import sys, numpy, matplotlib
+ 1435  print("Python     :", sys.version.split()[0])
+ 1436  print("NumPy      :", numpy.__version__)
+ 1437  print("Matplotlib :", matplotlib.__version__)
+ 1438  from matplotlib import pyplot as plt
+ 1439  print("pyplot OK")
+ 1440  import torch, mmengine, mmcv
+ 1441  print("Torch     :", torch.__version__, "| CUDA:", torch.version.cuda, "| is_available:", torch.cuda.is_available())
+ 1442  print("MMEngine  :", mmengine.__version__)
+ 1443  import pkgutil
+ 1444  try:
+ 1445      import mmcv
+ 1446      print("MMCV   :", mmcv.__version__, "at", mmcv.__file__)
+ 1447      print("has mmcv._ext ? ", pkgutil.find_loader("mmcv._ext") is not None)
+ 1448  except Exception as e:
+ 1449      print("MMCV import error:", repr(e))
+ 1450  PY
+ 1451  clear
+ 1452  cd ..
+ 1453  clear
+ 1454  ls
+ 1455  cd mmdetection3d/
+ 1456  clear
+ 1457  ls
+ 1458  python save_ply_image.py --dir results_kitti_full --basename 000008 --out results_kitti_full/kitti_screenshot.png
+ 1459  python save_ply_image.py --dir results_kitti_full --basename 000008 --video-out results_kitti_full/kitti_demo.mp4
+ 1460  NUSCENES_BASE="n015-2018007-24-11-22-45+0800__LIDAR_TOP__1532402927647951.pcd"
+ 1461  python save_ply_image.py --dir results_nuscenes_full --basename "$NUSCENES_BASE" --out results_nuscenes_full/nuscenes_screenshot.png
+ 1462  NUSCENES_BASE="n015-2018-07-24-11-22-45+0800__LIDAR_TOP__1532402927647951"
+ 1463  python save_ply_image.py --dir results_nuscenes_full --basename "$NUSCENES_BASE" --out results_nuscenes_full/nuscenes_screenshot.png
+ 1464  NUSCENES_BASE="n015-2018-07-24-11-22-45+0800__LIDAR_TOP__1532402927647951.pcd"
+ 1465  python save_ply_image.py --dir results_nuscenes_full --basename "$NUSCENES_BASE" --out results_nuscenes_full/nuscenes_screenshot.png
+ 1466  python save_ply_image.py --dir results_nuscenes_full --basename "$NUSCENES_BASE" --video-out results_nuscenes_full/nuscenes_demo.mp4
+ 1467  cat results_nuscenes_full/*_predictions.json | python -c "import sys, json; data=json.load(sys.stdin); print(f'Detections: {len(data.get(\"bboxes_3d\", []))}'); print(f'Sample scores: {data.get(\"scores_3d\", [])[:5]}')"
+ 1468  cat results_kitti_full/000008_predictions.json | python -c "import sys, json; data=json.load(sys.stdin); print(f'Detections: {len(data.get(\"bboxes_3d\", []))}'); print(f'Sample scores: {data.get(\"scores_3d\", [])[:5]}')"
+ 1469  clear
+ 1470  python mmdet3d_inference2.py --dataset any --input-path demo/data/nuscenes --model checkpoints/centerpoint_pillar02_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py --checkpoint checkpoints/centerpoint_02pillar_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220811_031844-191a3822.pth --modality lidar --out-dir results_nuscenes_full --headless --device cuda:0
+ 1471  mim --version
+ 1472  clear
+ 1473  mim install mmengine
+ 1474  pip uninstall numpy -y
+ 1475  pip install 'numpy<2'
+ 1476  mim install "mmdet>=3.0.0,<3.3.0"
+ 1477  mim install "mmdet3d>=1.1.0"
+ 1478  pip uninstall numpy -y
+ 1479  pip install 'numpy<2'
+ 1480  pip uninstall matplotlib -y
+ 1481  pip install matplotlib
+ 1482  clear
+ 1483  python mmdet3d_inference2.py --dataset any --input-path demo/data/nuscenes --model checkpoints/centerpoint_pillar02_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py --checkpoint checkpoints/centerpoint_02pillar_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220811_031844-191a3822.pth --modality lidar --out-dir results_nuscenes_full --headless --device cuda:0
+ 1484  cd ..
+ 1485  ls
+ 1486  cd mmcv/
+ 1487  clear
+ 1488  pip uninstall mmcv -y
+ 1489  pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+ 1490  python -m pip install -U pip setuptools wheel
+ 1491  python -m pip install -U openmim
+ 1492  clear
+ 1493  mim install mmengine
+ 1494  pip uninstall mmcv -y
+ 1495  pip uninsatll mmcv -y
+ 1496  pip uninstal mmcv -y
+ 1497  pip uninstall mmcv -y
+ 1498  clear
+ 1499  MMCV_WITH_OPS=1 pip install -e . -v --force-reinstall --no-deps
+ 1500  mim install "mmdet>=3.0.0,<3.3.0"
+ 1501  mim install "mmdet3d>=1.1.0"
+ 1502  pip install open3d opencv-python matplotlib tqdm
+ 1503  pip uninstall numpy -y
+ 1504  pip install 'numpy<2'
+ 1505  pip uninstall matplotlib -y
+ 1506  pip install matplotlib
+ 1507  python - <<'PY'
+ 1508  import sys, numpy, matplotlib
+ 1509  print("Python     :", sys.version.split()[0])
+ 1510  print("NumPy      :", numpy.__version__)
+ 1511  print("Matplotlib :", matplotlib.__version__)
+ 1512  from matplotlib import pyplot as plt
+ 1513  print("pyplot OK")
+ 1514  import torch, mmengine, mmcv
+ 1515  print("Torch     :", torch.__version__, "| CUDA:", torch.version.cuda, "| is_available:", torch.cuda.is_available())
+ 1516  print("MMEngine  :", mmengine.__version__)
+ 1517  import pkgutil
+ 1518  try:
+ 1519      import mmcv
+ 1520      print("MMCV   :", mmcv.__version__, "at", mmcv.__file__)
+ 1521      print("has mmcv._ext ? ", pkgutil.find_loader("mmcv._ext") is not None)
+ 1522  except Exception as e:
+ 1523      print("MMCV import error:", repr(e))
+ 1524  PY
+ 1525  clear
+ 1526  cd ../mmdetection3d/
+ 1527  python demo/pcd_demo.py demo/data/kitti/velodyne/000008.bin checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth --out-dir demo_output_1
+ 1528  clear
+ 1529  python mmdet3d_inference2.py --dataset any --input-path demo/data/nuscenes --model checkpoints/centerpoint_pillar02_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py --checkpoint checkpoints/centerpoint_02pillar_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220811_031844-191a3822.pth --modality lidar --out-dir results_nuscenes_full --headless --device cuda:0
+ 1530  clear
+ 1531  python save_ply_image.py --dir results_nuscenes_full --basename "$NUSCENES_BASE" --out results_nuscenes_full/nuscenes_screenshot_fixed.png
+ 1532  python save_ply_image.py --dir results_nuscenes_full --basename "$NUSCENES_BASE" --video-out results_nuscenes_full/nuscenes_screenshot_fixed.mp4
+ 1533  python save_ply_image.py --dir results_kitti_full --basename 000008 --video-out results_kitti_full/kitti_final_demo.mp4
+ 1534  python save_ply_image.py --dir results_nuscenes_full --basename "$NUSCENES_BASE" --video-out results_nuscenes_full/nuscenes_final_demo.mp4
+ 1535  clear
+ 1536  python analyze_results.py 
+ 1537  python mmdet3d_inference2.py --dataset any --input-path demo/data/nuscenes --model checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py --checkpoint checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth --modality lidar --out-dir results_pointpillars_nuscenes --headless --device cuda:0
+ 1538  python save_ply_image.py --dir results_pointpillars_nuscenes --basename "$NUSCENES_BASE" --out results_pointpillars_nuscenes/screenshot.png
+ 1539  python save_ply_image.py --dir results_pointpillars_nuscenes --basename "$NUSCENES_BASE" --video-out results_pointpillars_nuscenes/demo.mp4
+ 1540  python mmdet3d_inference2.py --dataset kitti --input-path demo/data/kitti --model checkpoints/centerpoint_pillar02_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py --checkpoint checkpoints/centerpoint_02pillar_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220811_031844-191a3822.pth --out-dir results_centerpoint_kitti --haedless -device cuda:0
+ 1541  python mmdet3d_inference2.py --dataset kitti --input-path demo/data/kitti --model checkpoints/centerpoint_pillar02_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py --checkpoint checkpoints/centerpoint_02pillar_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220811_031844-191a3822.pth --out-dir results_centerpoint_kitti --haedless --device cuda:0
+ 1542  python mmdet3d_inference2.py --dataset kitti --input-path demo/data/kitti --model checkpoints/centerpoint_pillar02_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py --checkpoint checkpoints/centerpoint_02pillar_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220811_031844-191a3822.pth --out-dir results_centerpoint_kitti --headless --device cuda:0
+ 1543  clear
+ 1544  PYTHONPATH=. python tools/create_data.py nuscenes --root-path ./data/nuscenes --out-dir ./data/nuscenes --extra-tag nuscenes --version v1.0-mini
+ 1545  clear
+ 1546  python tools/test.py checkpoints/centerpoint_pillar02_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py checkpoints/centerpoint_02pillar_second_secfpn_circlenms_4x8_cyclic_20e_nus_*.pth 
+ 1547  python tools/test.py centerpoint_mini.py checkpoints/centerpoint_02pillar_second_secfpn_circlenms_4x8_cyclic_20e_nus_*.pth 
+ 1548  python tools/test.py checkpoints/centerpoint_pillar02_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py checkpoints/centerpoint_02pillar_second_secfpn_circlenms_4x8_cyclic_20e_nus_*.pth 
+ 1549  clear
+ 1550  find /tmp -name "results_nusc.json" 2>/dev/null | head -1
+ 1551  clear
+ 1552  ls ~/data/nuscenes/samples/LIDAR_TOP/*.pcd.bin | head -10
+ 1553  chmod +x batch_inference_nuscenes.sh 
+ 1554  clear
+ 1555  ./batch_inference_nuscenes.sh 
+ 1556  python analyze_nuscenes_batch.py 
+ 1557  ls ~/data/nuscenes/samples/LIDAR_TOP/*.pcd.bin | head -10
+ 1558  ls
+ 1559  chmod +x script_test.sh 
+ 1560  ./script_test.sh 
+ 1561  python3 << 'EOF'
+ 1562  import json
+ 1563  import glob
+ 1564  from pathlib import Path
+ 1565  pred_files = sorted(glob.glob('results_nuscenes_batch/sample_*/*_predictions.json'))
+ 1566  good_samples = []
+ 1567  for pred_file in pred_files:
+ 1568      with open(pred_file, 'r') as f:
+ 1569          data = json.load(f)
+ 1570      
+ 1571      num_det = len(data['bboxes_3d'])
+ 1572      avg_score = sum(data['scores_3d']) / len(data['scores_3d']) if data['scores_3d'] else 0
+ 1573      
+ 1574      # Select samples with 20-50 detections and avg confidence > 0.3
+ 1575      if 20 <= num_det <= 50 and avg_score > 0.3:
+ 1576          basename = Path(pred_file).name.replace('_predictions.json', '')
+ 1577          sample_dir = Path(pred_file).parent.name
+ 1578          good_samples.append((sample_dir, basename, num_det, avg_score))
+ 1579  # Print top 3 candidates
+ 1580  print("Top 3 candidate samples for visualization:\n")
+ 1581  for i, (sample_dir, basename, num_det, score) in enumerate(sorted(good_samples, key=lambda x: -x[3])[:3], 1):
+ 1582      print(f"{i}. {sample_dir}/{basename}")
+ 1583      print(f"   Detections: {num_det}, Avg Confidence: {score:.3f}\n")
+ 1584  EOF
+ 1585  ls ~/data/nuscenes/samples/LIDAR_TOP/*.pcd.bin | head -10
+ 1586  sudo apt-get install vlc
+ 1587  clear
+ 1588  cd ..
+ 1589  cd mmdetection3d/
+ 1590  lc
+ 1591  ls
+ 1592  cd data/
+ 1593  ls
+ 1594  mkdir kitti
+ 1595  cd kitti/
+ 1596  clear
+ 1597  wget -help
+ 1598  clear
+ 1599  wget https://s3.eu-central-1.amazonaws.com/avg-kitti/data_object_label_2.zip
+ 1600  ls
+ 1601  wget https://s3.eu-central-1.amazonaws.com/avg-kitti/data_object_calib.zip
+ 1602  wget https://s3.eu-central-1.amazonaws.com/avg-kitti/data_object_image_2.zip
+ 1603  ls
+ 1604  wget https://s3.eu-central-1.amazonaws.com/avg-kitti/data_object_velodyne.zip
+ 1605  conda deactivate
+ 1606  conda activate functioning_bot
+ 1607  clear
+ 1608  cd ../nuscenes/
+ 1609  clear
+ 1610  cd ../..
+ 1611  mkdir -p data
+ 1612  ln -snf ~/data/nuscenes data/nuscenes
+ 1613  ls -lh data/nuscenes
+ 1614  ls -l
+ 1615  cd data
+ 1616  ls -l
+ 1617  cd nuscenes/
+ 1618  ls -l
+ 1619  rm nuscenes
+ 1620  cd ..
+ 1621  ls
+ 1622  clear
+ 1623  cd ..
+ 1624  clear
+ 1625  ln -snf ~/data/nuscenes/ data/nuscenes
+ 1626  ls -lh data/nuscenes
+ 1627  ls -l data
+ 1628  ln -snf v1.0-mini v1.0-trainval
+ 1629  ls -lh
+ 1630  conda deactivate
+ 1631  xhost +local:root
+ 1632  ocker run --name ros2-mmdetect-test   --gpus all   --network host   --shm-size=8g   -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/.X11-unix:rw   -v /home/mab/Desktop/thesi/ROS2-Tutorial:/workspace/ROS2-Tutorial   -w /workspace/ROS2-Tutorial   -it vision-suite:cu118 bash
+ 1633  docker run --name ros2-mmdetect-test   --gpus all   --network host   --shm-size=8g   -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/.X11-unix:rw   -v /home/mab/Desktop/thesi/ROS2-Tutorial:/workspace/ROS2-Tutorial   -w /workspace/ROS2-Tutorial   -it vision-suite:cu118 bash
+ 1634  docker pull
+ 1635  docker pull ambarishgk007/ros2-vision-suite:cu118
+ 1636  xhost +local:root
+ 1637  docker run --name ros2-mmdetect-test   --gpus all   --network host   --shm-size=8g   -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/.X11-unix:rw   -w /workspace/ROS2-Tutorial   -it ambarishgk007/ros2-vision-suite:cu118 bash
+ 1638  docker ps -a
+ 1639  doccer ps -a
+ 1640  docker ps -a
+ 1641  docker exec -it ros2-mmdetect-test bash
+ 1642  rivz2
+ 1643  ls
+ 1644  ros2
+ 1645  rviz2
+ 1646  cd Downloads/
+ 1647  ll
+ 1648  docker cp multilidarcalib1_0-001.db3 ros2-mmdetect-test:/workspace/ROS2-Tutorial/
+ 1649  docker exec -it ros2-mmdetect-test bash
+ 1650  docker rm ros2-mmdetect-test 
+ 1651  docker run --name ros2-mmdetect-test   --gpus all   --network host   --shm-size=8g   -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/.X11-unix:rw   -w /workspace/ROS2-Tutorial   -it ambarishgk007/ros2-vision-suite:cu118 
+ 1652  docker rm ros2-mmdetect-test 
+ 1653  docker run --name ros2-mmdetect-test   --gpus all   --network host   --shm-size=8g   -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/.X11-unix:rw   -w /workspace/ROS2-Tutorial   -it ambarishgk007/ros2-vision-suite:cu118 
+ 1654  docker rm ros2-mmdetect-test 
+ 1655  docker run --name ros2-mmdetect-test   --gpus all   --network host   --shm-size=8g   -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/.X11-unix:rw   -w /workspace/ROS2-Tutorial   -it ambarishgk007/ros2-vision-suite:cu118 
+ 1656  docker rm ros2-mmdetect-test 
+ 1657  docker run --name ros2-mmdetect-test   --gpus all   --network host   --shm-size=8g   -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/.X11-unix:rw   -w /workspace/ROS2-Tutorial   -it ambarishgk007/ros2-vision-suite:cu118 
+ 1658  docker rm ros2-mmdetect-test 
+ 1659  docker run --name ros2-mmdetect-test   --gpus all   --network host   --shm-size=8g   -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/.X11-unix:rw   -w /workspace/ROS2-Tutorial   -it ambarishgk007/ros2-vision-suite:cu118 
+ 1660  docker logs ros2-mmdetect-test 
+ 1661  sudo apt update
+ 1662  sudo apt upGRADE
+ 1663  sudo apt upgrade
+ 1664  docker run --name ros2-mmdetect-test   --gpus all   --network host   --shm-size=8g   -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/.X11-unix:rw   -w /workspace/ROS2-Tutorial   -it ambarishgk007/ros2-vision-suite:cu118 
+ 1665  docker rm ros2-mmdetect-test 
+ 1666  docker run --name ros2-mmdetect-test   --gpus all   --network host   --shm-size=8g   -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/.X11-unix:rw   -w /workspace/ROS2-Tutorial   -it ambarishgk007/ros2-vision-suite:cu118 
+ 1667  ros2 topic list
+ 1668  rviz2
+ 1669  git clone https://github.com/mit-han-lab/bevfusion.git
+ 1670  cd bevfusion/
+ 1671  docker build -t Bevfusion .
+ 1672  docker build -t bevfusion .
+ 1673  cd  docker/1
+ 1674  cd  docker/
+ 1675  docker build -t bevfusion .
+ 1676  cd ../../Downloads/
+ 1677  ll
+ 1678  docker cp multilidarcalib1_0-001.db3 ros2-mmdetect-test:/workspace/
+ 1679  ros2 bag play multilidarcalib1.db3
+ 1680  ros2 bag play multilidarcalib1_0-001.db3 
+ 1681  ros2 topic list
+ 1682  ros2 bag play multilidarcalib1_0-001.db3 
+ 1683  LS
+ 1684  ls
+ 1685  ll
+ 1686  ls snap/
+ 1687  ls Downloads/
+ 1688  ls bevfusion/
+ 1689  ll bevfusion/
+ 1690  ll Downloads/
+ 1691  clear
+ 1692  history
+ 1693  conda deactivate
+ 1694  cd functioning-bot/
+ 1695  ls
+ 1696  cd 3D_Object_Detection/
+ 1697  conda info
+ 1698  clear
+ 1699  conda activate functioning_bot
+ 1700  clear
+ 1701  history
+ 1702  ls
+ 1703  cd DeepDataMiningLearning/
+ 1704  ls
+ 1705  git pull
+ 1706  clear
+ 1707  ls
+ 1708  cd ..
+ 1709  ls
+ 1710  cd mmdetection3d/
+ 1711  ls
+ 1712  python - <<'PY'
+ 1713  import sys, numpy, matplotlib
+ 1714  print("Python     :", sys.version.split()[0])
+ 1715  print("NumPy      :", numpy.__version__)
+ 1716  print("Matplotlib :", matplotlib.__version__)
+ 1717  from matplotlib import pyplot as plt
+ 1718  print("pyplot OK")
+ 1719  import torch, mmengine, mmcv
+ 1720  print("Torch     :", torch.__version__, "| CUDA:", torch.version.cuda, "| is_available:", torch.cuda.is_available())
+ 1721  print("MMEngine  :", mmengine.__version__)
+ 1722  import pkgutil
+ 1723  try:
+ 1724      import mmcv
+ 1725      print("MMCV   :", mmcv.__version__, "at", mmcv.__file__)
+ 1726      print("has mmcv._ext ? ", pkgutil.find_loader("mmcv._ext") is not None)
+ 1727  except Exception as e:
+ 1728      print("MMCV import error:", repr(e))
+ 1729  PY
+ 1730  clear
+ 1731  ls
+ 1732  cd ~
+ 1733  cd data/
+ 1734  ls
+ 1735  clear
+ 1736  cd ..
+ 1737  clear
+ 1738  tree -L 3 data/
+ 1739  sudo apt install tree
+ 1740  clear
+ 1741  tree -L 3 data/
+ 1742  tree -L 2 data/
+ 1743  cd functioning-bot/3D_Object_Detection/mmdetection3d/
+ 1744  clear
+ 1745  ls
+ 1746  mkdir -p data/kitti/training/calib
+ 1747  mkdir -p data/kitti/training/image_2
+ 1748  mkdir -p data/kitti/training/label_2
+ 1749  mkdir -p data/kitti/training/velodyne
+ 1750  mkdir -p data/kitti/ImageSets
+ 1751  mv data/kitti/data_object_calib/training/calib/* data/kitti/training/calib/
+ 1752  mv /data/kitti/data_object_calib/training/calib/* /data/kitti/training/calib/ /home/cmpe/data/kitti/data_object_calib/training/calib
+ 1753  mv ~/data/kitti/data_object_calib/training/calib/* ~/data/kitti/training/calib/
+ 1754  ls
+ 1755  ls data
+ 1756  ls data/kitti/
+ 1757  cd ..
+ 1758  ls
+ 1759  cd mmdetection3d/
+ 1760  rm -rf data/kitti/
+ 1761  ls data
+ 1762  clear
+ 1763  cd ~/
+ 1764  ls
+ 1765  ls data/
+ 1766  ls data/kitti/
+ 1767  mkdir -p data/kitti/training/calib
+ 1768  mkdir -p data/kitti/training/image_2
+ 1769  mkdir -p data/kitti/training/label_2
+ 1770  mkdir -p data/kitti/training/velodyne
+ 1771  mkdir -p data/kitti/ImageSets
+ 1772  ls data/kitti/
+ 1773  mv data/kitti/data_object_calib/training/calib/* data/kitti/training/calib/
+ 1774  mv data/kitti/data_object_image_2/training/image_2/* data/kitti/training/image_2/
+ 1775  mv data/kitti/data_object_label_2/training/label_2/* data/kitti/training/label_2/
+ 1776  mv data/kitti/data_object_velodyne/training/velodyne/* data/kitti/training/velodyne/
+ 1777  rm -rf data/kitti/data_object_*
+ 1778  cd data/kitti/
+ 1779  ls
+ 1780  cd ImageSets/
+ 1781  wget https://raw.githubusercontent.com/traveller59/second.pytorch/master/second/data/ImageSets/train.txt -O data/kitti/ImageSets/train.txt
+ 1782  wget https://raw.githubusercontent.com/traveller59/second.pytorch/master/second/data/ImageSets/val.txt -O data/kitti/ImageSets/val.txt
+ 1783  wget https://raw.githubusercontent.com/traveller59/second.pytorch/master/second/data/ImageSets/trainval.txt -O data/kitti/ImageSets/trainval.txt
+ 1784  wget https://raw.githubusercontent.com/traveller59/second.pytorch/master/second/data/ImageSets/test.txt -O data/kitti/ImageSets/test.txt
+ 1785  wget https://raw.githubusercontent.com/traveller59/second.pytorch/master/second/data/ImageSets/train.txt -O train.txt
+ 1786  wget https://raw.githubusercontent.com/traveller59/second.pytorch/master/second/data/ImageSets/val.txt -O val.txt
+ 1787  wget https://raw.githubusercontent.com/traveller59/second.pytorch/master/second/data/ImageSets/trainval.txt -O trainval.txt
+ 1788  wget https://raw.githubusercontent.com/traveller59/second.pytorch/master/second/data/ImageSets/test.txt -O test.txt
+ 1789  ls
+ 1790  cd ..
+ 1791  ls
+ 1792  cd training/
+ 1793  ls
+ 1794  clear
+ 1795  cd ~/functioning-bot/3D_Object_Detection/mmdetection3d/
+ 1796  ln -s /home/cmpe/data/kitti data/kitti
+ 1797  ls -l data
+ 1798  python tools/create_data.py kitti --root-path ./data/kitti --out-dir ./data/kitti --extra-tag kitti
+ 1799  python - <<'PY'
+ 1800  import sys, numpy, matplotlib
+ 1801  print("Python     :", sys.version.split()[0])
+ 1802  print("NumPy      :", numpy.__version__)
+ 1803  print("Matplotlib :", matplotlib.__version__)
+ 1804  from matplotlib import pyplot as plt
+ 1805  print("pyplot OK")
+ 1806  import torch, mmengine, mmcv
+ 1807  print("Torch     :", torch.__version__, "| CUDA:", torch.version.cuda, "| is_available:", torch.cuda.is_available())
+ 1808  print("MMEngine  :", mmengine.__version__)
+ 1809  import pkgutil
+ 1810  try:
+ 1811      import mmcv
+ 1812      print("MMCV   :", mmcv.__version__, "at", mmcv.__file__)
+ 1813      print("has mmcv._ext ? ", pkgutil.find_loader("mmcv._ext") is not None)
+ 1814  except Exception as e:
+ 1815      print("MMCV import error:", repr(e))
+ 1816  PY
+ 1817  conda deactivate
+ 1818  conda activate functioning_bot
+ 1819  python - <<'PY'
+ 1820  import sys, numpy, matplotlib
+ 1821  print("Python     :", sys.version.split()[0])
+ 1822  print("NumPy      :", numpy.__version__)
+ 1823  print("Matplotlib :", matplotlib.__version__)
+ 1824  from matplotlib import pyplot as plt
+ 1825  print("pyplot OK")
+ 1826  import torch, mmengine, mmcv
+ 1827  print("Torch     :", torch.__version__, "| CUDA:", torch.version.cuda, "| is_available:", torch.cuda.is_available())
+ 1828  print("MMEngine  :", mmengine.__version__)
+ 1829  import pkgutil
+ 1830  try:
+ 1831      import mmcv
+ 1832      print("MMCV   :", mmcv.__version__, "at", mmcv.__file__)
+ 1833      print("has mmcv._ext ? ", pkgutil.find_loader("mmcv._ext") is not None)
+ 1834  except Exception as e:
+ 1835      print("MMCV import error:", repr(e))
+ 1836  PY
+ 1837  python tools/create_data.py kitti --root-path ./data/kitti --out-dir ./data/kitti --extra-tag kitti
+ 1838  ls
+ 1839  python -m pip install -U pip setuptools wheel
+ 1840  python tools/create_data.py kitti --root-path ./data/kitti --out-dir ./data/kitti --extra-tag kitti
+ 1841  python - <<'PY'
+ 1842  import sys, numpy, matplotlib
+ 1843  print("Python     :", sys.version.split()[0])
+ 1844  print("NumPy      :", numpy.__version__)
+ 1845  print("Matplotlib :", matplotlib.__version__)
+ 1846  from matplotlib import pyplot as plt
+ 1847  print("pyplot OK")
+ 1848  import torch, mmengine, mmcv
+ 1849  print("Torch     :", torch.__version__, "| CUDA:", torch.version.cuda, "| is_available:", torch.cuda.is_available())
+ 1850  print("MMEngine  :", mmengine.__version__)
+ 1851  import pkgutil
+ 1852  try:
+ 1853      import mmcv
+ 1854      print("MMCV   :", mmcv.__version__, "at", mmcv.__file__)
+ 1855      print("has mmcv._ext ? ", pkgutil.find_loader("mmcv._ext") is not None)
+ 1856  except Exception as e:
+ 1857      print("MMCV import error:", repr(e))
+ 1858  PY
+ 1859  PYTHONPATH=. python tools/create_data.py kitti --root-path ./data/kitti --out-dir ./data/kitti --extra-tag kitti
+ 1860  PYTHONPATH=. python tools/create_data.py nuscenes --root-path ./data/nuscenes --out-dir ./data/nuscenes --extra-tag nuscenes --version v1.0-mini
+ 1861  cd checkpoints/
+ 1862  ls
+ 1863  cd ,,
+ 1864  cd ..
+ 1865  mim download mmdet3d --config pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car --dest checkpoints
+ 1866  ll checkpoints/
+ 1867  mim download mmdet3d --config second_hv_secfpn_8xb6-80e_kitti-3d-car --dest checkpoints
+ 1868  mim download mmdet3d --config pointpillars_hv_secfpn_sbn-all_8xb4-2x_nus-3d --dest checkpoints
+ 1869  mim download mmdet3d --config centerpoint_01voxel_second_secfpn_4x8_cyclic_20e_nus_3d --dest checkpoints
+ 1870  mim download mmdet3d --config centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d --dest checkpoints
+ 1871  ll checkpoints/
+ 1872  clear
+ 1873  python mmdet3d_inference2.py     --dataset kitti     --input-path data/kitti/training     --model pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py     --checkpoint checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth     --out-dir results/kitti_test_single     --score-thr 0.3     --device cuda:0     --frame-number 000008
+ 1874  python mmdet3d_inference2.py     --dataset kitti     --input-path data/kitti/training     --model checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py     --checkpoint checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth     --out-dir results/kitti_test_single     --score-thr 0.3     --device cuda:0     --frame-number 000008
+ 1875  python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file data/nuscenes/nuscenes_infos_val.pkl     --config checkpoints/configs/pointpillars/pointpillars_hv_secfpn_sbn-all_8xb4-2x_nus-3d.py     --checkpoint checkpoints/hv_pointpillars_secfpn_sbn-all_4x8_2x_nus-3d_20210826_225857-f19d00a3.pth     --out-dir results/nuscenes_test_single     --data-source cfg     --save-images     --no-open3d     --max-samples 1
+ 1876  pip install psutil
+ 1877  python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file data/nuscenes/nuscenes_infos_val.pkl     --config checkpoints/pointpillars_hv_secfpn_sbn-all_8xb4-2x_nus-3d.py     --checkpoint checkpoints/hv_pointpillars_secfpn_sbn-all_4x8_2x_nus-3d_20210826_225857-f19d00a3.pth     --out-dir results/nuscenes_test_single     --data-source cfg     --save-images     --no-open3d     --max-samples 1
+ 1878  python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file data/nuscenes/nuscenes_infos_val.pkl     --config checkpoints/pointpillars_hv_secfpn_sbn-all_8xb4-2x_nus-3d.py     --checkpoint checkpoints/hv_pointpillars_secfpn_sbn-all_4x8_2x_nus-3d_20210826_225857-f19d00a3.pth     --out-dir results/nuscenes_test_single     --data-source cfg     --no-open3d     --max-samples 1
+ 1879  python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/pointpillars_hv_secfpn_sbn-all_8xb4-2x_nus-3d.py     --checkpoint checkpoints/hv_pointpillars_secfpn_sbn-all_4x8_2x_nus-3d_20210826_225857-f19d00a3.pth     --out-dir results/nuscenes_test_single     --data-source cfg     --no-open3d     --max-samples 1
+ 1880  python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/pointpillars_hv_secfpn_sbn-all_8xb4-2x_nus-3d.py     --checkpoint checkpoints/hv_pointpillars_secfpn_sbn-all_4x8_2x_nus-3d_20210826_225857-f19d00a3.pth     --out-dir results/nuscenes_test_single     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples 1
+ 1881  DISPLAY="" python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/pointpillars_hv_secfpn_sbn-all_8xb4-2x_nus-3d.py     --checkpoint checkpoints/hv_pointpillars_secfpn_sbn-all_4x8_2x_nus-3d_20210826_225857-f19d00a3.pth     --out-dir results/nuscenes_test_single     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples 1
+ 1882  DISPLAY="" python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/pointpillars_hv_secfpn_sbn-all_8xb4-2x_nus-3d.py     --checkpoint checkpoints/hv_pointpillars_secfpn_sbn-all_4x8_2x_nus-3d_20210826_225857-f19d00a3.pth     --out-dir results/nuscenes_test_single     --data-source custom     --nus-version v1.0-mini    --max-samples 1
+ 1883  DISPLAY="" python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/pointpillars_hv_secfpn_sbn-all_8xb4-2x_nus-3d.py     --checkpoint checkpoints/hv_pointpillars_secfpn_sbn-all_4x8_2x_nus-3d_20210826_225857-f19d00a3.pth     --out-dir results/nuscenes_test_single     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples 1
+ 1884  clear
+ 1885  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/pointpillars_hv_secfpn_sbn-all_8xb4-2x_nus-3d.py     --checkpoint checkpoints/hv_pointpillars_secfpn_sbn-all_4x8_2x_nus-3d_20210826_225857-f19d00a3.pth     --out-dir results/nuscenes_test_single     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples 1
+ 1886  python open3d_view_saved_ply.py --dir results/nuscenes_test_single --basename 3e8750f331d7499e9b5123e9eb70f2e2
+ 1887  python mmdet3d_inference2.py     --dataset kitti     --input-path data/kitti/training     --model checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-car.py     --checkpoint checkpoints/hv_second_secfpn_6x8_80e_kitti-3d-car_20220331_134606-d42d15ed.pth     --out-dir results/kitti_second_test_single     --score-thr 0.3     --device cuda:0     --frame-number 000008
+ 1888  python mmdet3d_inference2.py     --dataset kitti     --input-path data/kitti/training     --model checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-car.py     --checkpoint checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-car-75d9305e.pth     --out-dir results/kitti_second_test_single     --score-thr 0.3     --device cuda:0     --frame-number 000008
+ 1889  clear
+ 1890  python mmdet3d_inference2.py     --dataset kitti     --input-path data/kitti/training     --model checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py     --checkpoint checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth     --out-dir results/kitti_pp     --score-thr 0.3     --device cuda:0
+ 1891  python mmdet3d_inference2.py     --dataset kitti     --input-path data/kitti/training     --model checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py     --checkpoint checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth     --out-dir results/kitti_pp     --score-thr 0.3     --device cuda:0 --headless --frame-number -1
+ 1892  python mmdet3d_inference2.py     --dataset kitti     --input-path data/kitti/training     --model checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-car.py     --checkpoint checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-car-75d9305e.pth     --out-dir results/kitti_second     --score-thr 0.3     --device cuda:0 --headless --frame-number -1
+ 1893  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/pointpillars_hv_secfpn_sbn-all_8xb4-2x_nus-3d.py     --checkpoint checkpoints/hv_pointpillars_secfpn_sbn-all_4x8_2x_nus-3d_20210826_225857-f19d00a3.pth     --out-dir results/nuscenes_pp     --data-source custom     --nus-version v1.0-mini     --no-open3d
+ 1894  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/pointpillars_hv_secfpn_sbn-all_8xb4-2x_nus-3d.py     --checkpoint checkpoints/hv_pointpillars_secfpn_sbn-all_4x8_2x_nus-3d_20210826_225857-f19d00a3.pth     --out-dir results/nuscenes_pp     --data-source custom     --nus-version v1.0-mini     --no-open3d --max-samples -1
+ 1895  ls data
+ 1896  ll data
+ 1897  tree -L2 data/nuscenes
+ 1898  tree -L 2 data/nuscenes
+ 1899  tree -L 1 data/nuscenes
+ 1900  clear
+ 1901  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py     --checkpoint checkpoints/centerpoint_01voxel_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d_20210816_054143-aa629974.pth     --out-dir results/nuscenes_cp     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples -1
+ 1902  ls checkpoints
+ 1903  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py     --checkpoint checkpoints/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth     --out-dir results/nuscenes_cp     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples -1
+ 1904  conda deactivate
+ 1905  conda activate functioning_bot
+ 1906  cd functioning-bot/3D_Object_Detection/mmdetection3d/
+ 1907  clear
+ 1908  ll
+ 1909  history
+ 1910  python open3d_view_saved_ply.py --dir results/kitti_pp --basename 000001
+ 1911  python open3d_view_saved_ply.py --dir results/nuscenes_pp --basename 0a0d6b8c2e884134a3b48df43d54c36a
+ 1912  q
+ 1913  python open3d_view_saved_ply.py --dir results/nuscenes_pp --basename 3e8750f331d7499e9b5123e9eb70f2e2
+ 1914  ls -lh results/nuscenes_pp/*_pred.ply | head -n 5
+ 1915  ls -lh results/nuscenes_pp/*_pred.ply | head -n 1
+ 1916  cat results/nuscenes_pp/048a45dd2cf54aa5808d8ccc85731d44_pred.ply
+ 1917  cd results/nuscenes_pp/
+ 1918  for f in *_gt.ply; do cp "$f" "${f/_gt.ply/_gt_bboxes.ply}"; done
+ 1919  ls
+ 1920  ll
+ 1921  python open3d_view_saved_ply.py --dir results/nuscenes_pp --basename 3e8750f331d7499e9b5123e9eb70f2e2
+ 1922  cd ..
+ 1923  python open3d_view_saved_ply.py --dir results/nuscenes_pp --basename 3e8750f331d7499e9b5123e9eb70f2e2
+ 1924  cd results/nuscenes_pp/
+ 1925  for f in *_gt.ply; do cp "$f" "${f/_gt.ply/_gt_bboxes.ply}"; done
+ 1926  ll
+ 1927  python open3d_view_saved_ply.py --dir results/nuscenes_pp --basename 3e8750f331d7499e9b5123e9eb70f2e2
+ 1928  cd ../..
+ 1929  python open3d_view_saved_ply.py --dir results/nuscenes_pp --basename 3e8750f331d7499e9b5123e9eb70f2e2
+ 1930  python open3d_view_saved_ply.py --dir results/nuscenes_pp --basename 0af0feb5b1394b928dd13d648de898f5
+ 1931  python mmdet3d_inference2.py --dataset kitti --input-path data/kitti/training/ --model checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-car.py --checkpoint checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-car-75d9305e.pth --out-dir results/kitti_second_debug --score-thr 0.1 --device cuda:0 --frame-number 000008
+ 1932  python mmdet3d_inference2.py --dataset kitti --input-path data/kitti/training/ --model checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-car.py --checkpoint checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-car-75d9305e.pth --out-dir results/kitti_second_debug --score-thr 0.05 --device cuda:0 --frame-number 000008
+ 1933  python demo/pcd_demo.py data/kitti/training/velodyne/000008.bin checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-car.py checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-car-75d9305e.pth --show --score-thr 0.3
+ 1934  python demo/pcd_demo.py data/kitti/training/velodyne/000008.bin checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-car.py checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-car-75d9305e.pth --show 
+ 1935  python tools/test.py checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth --eval mAP
+ 1936  python tools/test.py checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth 
+ 1937  ffmpeg -framrate 10 -pattern_type glob -i 'results/kitti_pp/*.png' -c:v libx264 -pix_fmt yuv420p kitti_demo.mp4
+ 1938  sudo apt install ffmpeg
+ 1939  ffmpeg -framrate 10 -pattern_type glob -i 'results/kitti_pp/*.png' -c:v libx264 -pix_fmt yuv420p kitti_demo.mp4
+ 1940  ffmpeg -framerate 10 -pattern_type glob -i 'results/kitti_pp/*.png' -c:v libx264 -pix_fmt yuv420p kitti_demo.mp4
+ 1941  python open3d_view_saved_ply.py --dir results/kitti_pp/ --basename 000007
+ 1942  python open3d_view_saved_ply.py --dir results/kitti_pp/ --basename 005442
+ 1943  python open3d_view_saved_ply.py --dir results/kitti_pp/ --basename 004533
+ 1944  clear
+ 1945  python tools/test.py checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth 
+ 1946  python fix_kitti_infos.py
+ 1947  python tools/test.py checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth 
+ 1948  python fix_kitti_deep.py
+ 1949  python tools/test.py checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth 
+ 1950  python fix_kitti_deep.py
+ 1951  python tools/test.py checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth 
+ 1952  python fix_kitti_deep.py
+ 1953  python tools/test.py checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth 
+ 1954  python fix_kitti_deep.py
+ 1955  python tools/test.py checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth 
+ 1956  python fix_kitti_deep.py
+ 1957  python tools/test.py checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth 
+ 1958  python fix_kitti_deep.py
+ 1959  python tools/test.py checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth 
+ 1960  python fix_kitti_deep.py
+ 1961  python tools/test.py checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth 
+ 1962  for f in *_pred.ply; do cp "$f" "${f/_pred.ply/_pred_bboxes.ply}"; done
+ 1963  for f in *_gt.ply; do cp "$f" "${f/_gt.ply/_gt_bboxes.ply}"; done
+ 1964  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py     --checkpoint checkpoints/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth     --out-dir results/test_nuscenes_cp     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples 1
+ 1965  cd ../..
+ 1966  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py     --checkpoint checkpoints/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth     --out-dir results/test_nuscenes_cp     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples 1
+ 1967  conda deactivate
+ 1968  conda activate functioning_bot
+ 1969  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py     --checkpoint checkpoints/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth     --out-dir results/test_nuscenes_cp     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples 1
+ 1970  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py     --checkpoint checkpoints/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth     --out-dir results/test_nuscenes_cp     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples 1 --eval
+ 1971  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py     --checkpoint checkpoints/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth     --out-dir results/test_nuscenes_cp     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples 1 
+ 1972  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py     --checkpoint checkpoints/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth     --out-dir results/test_nuscenes_cp     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples 20 
+ 1973  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py     --checkpoint checkpoints/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth     --out-dir results/test_nuscenes_cp     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples 20 --eval
+ 1974  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py     --checkpoint checkpoints/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth     --out-dir results/nuscenes_cp     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples -1
+ 1975  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py     --checkpoint checkpoints/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth     --out-dir results/nuscenes_cp     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples -1 --eval
+ 1976  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py     --checkpoint checkpoints/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth     --out-dir results/test_nuscenes_cp     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples 2
+ 1977  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py     --checkpoint checkpoints/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth     --out-dir results/test_nuscenes_cp     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples 2 --eval
+ 1978  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py     --checkpoint checkpoints/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth     --out-dir results/nuscenes_cp     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples -1
+ 1979  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py     --checkpoint checkpoints/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth     --out-dir results/nuscenes_cp     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples -1 --eval
+ 1980  prep={'latency_mean': 139.69500732421875, 'latency_std': 212.3561248779297, 'latency_min': 54.071292877197266, 'latency_max': 2036.671875, 'mem_peak': 8457.9853515625, 'samples': 81, 'score_thresh': 0.05, 'system_info': {'timestamp': '2025-12-10T16:32:19.267822', 'mmdet3d': '1.4.0', 'gpu': 'NVIDIA GeForce RTX 4090', 'memory_gb': 61.98}, 'NDS': 0.44936902374931503, 'mAP': 0.47943538921620077}
+ 1981  python
+ 1982  ls
+ 1983  python3 <<EOF
+import json
+import os
+
+# 1. Define the data
+perf = {
+    'latency_mean': 139.69500732421875, 
+    'latency_std': 212.3561248779297, 
+    'latency_min': 54.071292877197266, 
+    'latency_max': 2036.671875, 
+    'mem_peak': 8457.9853515625, 
+    'samples': 81, 
+    'score_thresh': 0.05, 
+    'system_info': {
+        'timestamp': '2025-12-10T16:32:19.267822', 
+        'mmdet3d': '1.4.0', 
+        'gpu': 'NVIDIA GeForce RTX 4090', 
+        'memory_gb': 61.98
+    }, 
+    'NDS': 0.44936902374931503, 
+    'mAP': 0.47943538921620077
+}
+
+# 2. Define the directory (As you requested: "results/nuscene_cp/")
+out_dir = "results/nuscene_cp/"
+
+# 3. Create directory if it doesn't exist
+if not os.path.exists(out_dir):
+    os.makedirs(out_dir)
+
+# 4. Save the file
+output_path = os.path.join(out_dir, "benchmark_nuscenes.json")
+with open(output_path, "w") as f:
+    json.dump(perf, f, indent=4)
+
+print(f"Success! Benchmark results saved to: {output_path}")
+EOF
+
+ 1984  python3 <<EOF
+import json
+import os
+
+# 1. Define the data
+perf = {
+    'latency_mean': 139.69500732421875, 
+    'latency_std': 212.3561248779297, 
+    'latency_min': 54.071292877197266, 
+    'latency_max': 2036.671875, 
+    'mem_peak': 8457.9853515625, 
+    'samples': 81, 
+    'score_thresh': 0.05, 
+    'system_info': {
+        'timestamp': '2025-12-10T16:32:19.267822', 
+        'mmdet3d': '1.4.0', 
+        'gpu': 'NVIDIA GeForce RTX 4090', 
+        'memory_gb': 61.98
+    }, 
+    'NDS': 0.44936902374931503, 
+    'mAP': 0.47943538921620077
+}
+
+# 2. Define the directory (As you requested: "results/nuscene_cp/")
+out_dir = "results/nuscenes_cp/"
+
+# 3. Create directory if it doesn't exist
+if not os.path.exists(out_dir):
+    os.makedirs(out_dir)
+
+# 4. Save the file
+output_path = os.path.join(out_dir, "benchmark_nuscenes.json")
+with open(output_path, "w") as f:
+    json.dump(perf, f, indent=4)
+
+print(f"Success! Benchmark results saved to: {output_path}")
+EOF
+
+ 1985  env -u DISPLAY python simple_infer_main.py     --dataset nuscenes     --dataroot data/nuscenes     --ann-file nuscenes_infos_val.pkl     --config checkpoints/centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py     --checkpoint checkpoints/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth     --out-dir results/nuscenes_cp     --data-source custom     --nus-version v1.0-mini     --no-open3d     --max-samples -1 --eval
+ 1986  fa65a298c01f44e7a182bbf9e5fe3697
+ 1987  python open3d_view_saved_ply.py --dir results/nuscene_cp --basename fa65a298c01f44e7a182bbf9e5fe3697
+ 1988  python open3d_view_saved_ply.py --dir results/nuscenes_cp --basename fa65a298c01f44e7a182bbf9e5fe3697
+ 1989  python open3d_view_saved_ply.py --dir results/nuscenes_cp --basename a98fba72bde9433fb882032d18aedb2e
+ 1990  python open3d_view_saved_ply.py --dir results/nuscenes_cp --basename 8573a885a7cb41d185c05029eeb9a54e
+ 1991  python open3d_view_saved_ply.py --dir results/nuscenes_cp --basename b22fa0b3c34f47b6a360b60f35d5d567
+ 1992  ffmpeg -framerate 10 -pattern_type glob -i 'Final_report/nuscene_cp/*.jpg' -c:v libx264 -pix_fmt yuv420p nuscenes_centerpoint_demo.mp4
+ 1993  ffmpeg -framerate 10 -pattern_type glob -i 'results/nuscene_cp/*.jpg' -c:v libx264 -pix_fmt yuv420p nuscenes_centerpoint_demo.mp4
+ 1994  ffmpeg -framerate 10 -pattern_type glob -i 'results/nuscenes_cp/*.jpg' -c:v libx264 -pix_fmt yuv420p nuscenes_centerpoint_demo.mp4
+ 1995  python open3d_view_saved_ply.py --dir results/nuscenes_pp --basename b5989651183643369174912bc5641d3b
+ 1996  python open3d_view_saved_ply.py --dir results/nuscenes_pp --basename e63b83b436a0479db7362338cdfab118
+ 1997  python open3d_view_saved_ply.py --dir results/nuscenes_pp --basename fdc39b23ab4242eda6ec5e1e6574fe33
+ 1998  python mmdet3d_inference2.py     --dataset kitti     --input-path data/kitti/training     --model checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-car.py     --checkpoint checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-car-75d9305e.pth     --out-dir results/kitti_second     --score-thr 0.1     --device cuda:0     --max-samples 100     --dry-run
+ 1999  python mmdet3d_inference2.py     --dataset kitti     --input-path data/kitti/training     --model checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-car.py     --checkpoint checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-car-75d9305e.pth     --out-dir results/kitti_second     --score-thr 0.1     --device cuda:0  
+ 2000  cd checkpoints/
+ 2001  clear
+ 2002  mim download mmdet3d --config second_hv_secfpn_8xb6-80e_kitti-3d-3class --dest checkpoints
+ 2003  cd ..
+ 2004  python mmdet3d_inference2.py     --dataset kitti     --input-path data/kitti/training     --model checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-3class.py     --checkpoint checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-3class_20210831_022655-14a92953.pth     --out-dir results/kitti_second_3class     --score-thr 0.3     --device cuda:0 \
+ 2005  mim download mmdet3d --config second_hv_secfpn_8xb6-80e_kitti-3d-3class --dest checkpoints
+ 2006  python mmdet3d_inference2.py     --dataset kitti     --input-path data/kitti/training     --model checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-3class.py     --checkpoint checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-3class-b086d0a3.pth     --out-dir results/kitti_second_3class     --score-thr 0.3     --device cuda:0 \
+ 2007  python mmdet3d_inference2.py     --dataset kitti     --input-path data/kitti/training     --model checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-3class.py     --checkpoint checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-3class-b086d0a3.pth     --out-dir results/kitti_second_3class     --score-thr 0.3     --device cuda:0 --headless
+ 2008  cd checkpoints/
+ 2009  wget https://download.openmmlab.com/mmdetection3d/v1.0.0_models/second/second_hv_secfpn_8xb6-80e_kitti-3d-3class/second_hv_secfpn_8xb6-80e_kitti-3d-3class_20210831_022655-14a92953.pth -O checkpoints/second_hv_secfpn_8xb6-80e_kitti-3d-3class_20210831_022655-14a92953.pth
+ 2010  cd ..
+ 2011  mim download mmdet3d --config second_hv_secfpn_8xb6-80e_kitti-3d-3class --dest checkpoints
+ 2012  python open3d_view_saved_ply.py --dir results/kitti_pvrcnn_backup --basename 007479
+ 2013  python open3d_view_saved_ply.py --dir results/kitti_pvrcnn_backup --basename 002103
+ 2014  python open3d_view_saved_ply.py --dir results/kitti_pvrcnn_backup --basename 000008
+ 2015  clear
+ 2016  ll checkpoints/
+ 2017  clear
+ 2018  history
+(functioning_bot) cmpe@cmpe-4090:~/functioning-bot/3D_Object_Detection/mmdetection3d$ 
+
