@@ -100,32 +100,51 @@ Comparison on the KITTI dataset highlighted a distinct "Accuracy Tax" where spee
 
 On the NuScenes dataset, observed the fragility of anchor-based methods in complex environments. The PointPillars model failed completely with a 0.0% mAP, likely because its rigid, pre-defined anchor boxes could not adapt to the diverse 360-degree orientations of objects. In contrast, the anchor-free CenterPoint model achieved a robust 47.9% mAP by detecting object centers rather than fitting boxes. This suggests that anchor-free architectures are significantly more robust for complex, multi-class environments involving rotation and unusual object shapes.
 
-## 7\. Reproduction Commands
+## 7\. Reproduction Steps
 
-### **Experiments 1 & 2: KITTI (Using `mmdet3d_inference2.py`)**
+**Step 1: Environment Setup**
+Run the installation commands listed in **Section 1** to create the environment and install dependencies.
 
-**Exp 1: PointPillars**
+**Step 2: Prepare Datasets**
+Download the datasets and organize them as follows:
+
+  * **KITTI:** Place training data in `mmdetection3d/data/kitti/`
+  * **NuScenes:** Place v1.0-Mini split in `mmdetection3d/data/nuscenes/`
+
+**Step 3: Download Checkpoints**
+Run these commands to verify or re-download the exact model weights used in this report.
 
 ```bash
-python mmdet3d_inference2.py --dataset kitti --input-path data/kitti/training --model checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py --checkpoint checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth --out-dir results/kitti_pp --score-thr 0.3 --device cuda:0 --headless --frame-number -1
+mkdir -p checkpoints
+mim download mmdet3d --config pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car --dest mmdetection3d/checkpoints
+mim download mmdet3d --config pv_rcnn_8xb2-80e_kitti-3d-3class --dest mmdetection3d/checkpoints
+mim download mmdet3d --config pointpillars_hv_secfpn_sbn-all_8xb4-2x_nus-3d --dest mmdetection3d/checkpoints
+mim download mmdet3d --config centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d --dest mmdetection3d/checkpoints
 ```
 
-**Exp 2: PV-RCNN**
+**Step 4: Execute Experiments**
+Run the inference commands below to reproduce results.
+
+**Exp 1: KITTI PointPillars**
 
 ```bash
-python mmdet3d_inference2.py --dataset kitti --input-path data/kitti/training --model checkpoints/pv_rcnn_8xb2-80e_kitti-3d-3class.py --checkpoint checkpoints/pv_rcnn_8xb2-80e_kitti-3d-3class_20210831_022655-14a92953.pth --out-dir results/kitti_pvrcnn --score-thr 0.3 --device cuda:0 --headless --frame-number -1
+python mmdetection3d/mmdet3d_inference2.py --dataset kitti --input-path mmdetection3d/data/kitti/training --model mmdetection3d/checkpoints/pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py --checkpoint mmdetection3d/checkpoints/hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth --out-dir mmdetection3d/results/kitti_pp --score-thr 0.3 --device cuda:0 --headless --frame-number -1
 ```
 
-### **Experiments 3 & 4: NuScenes (Using `simple_infer_main.py`)**
-
-**Exp 3: PointPillars**
+**Exp 2: KITTI PV-RCNN**
 
 ```bash
-env -u DISPLAY python simple_infer_main.py --dataset nuscenes --dataroot data/nuscenes --ann-file nuscenes_infos_val.pkl --config checkpoints/pointpillars_hv_secfpn_sbn-all_8xb4-2x_nus-3d.py --checkpoint checkpoints/hv_pointpillars_secfpn_sbn-all_4x8_2x_nus-3d_20210826_225857-f19d00a3.pth --out-dir results/nuscenes_pp --data-source custom --nus-version v1.0-mini --no-open3d --max-samples -1 --eval
+python mmdetection3d/mmdet3d_inference2.py --dataset kitti --input-path mmdetection3d/data/kitti/training --model mmdetection3d/checkpoints/pv_rcnn_8xb2-80e_kitti-3d-3class.py --checkpoint mmdetection3d/checkpoints/pv_rcnn_8xb2-80e_kitti-3d-3class_20210831_022655-14a92953.pth --out-dir mmdetection3d/results/kitti_pvrcnn --score-thr 0.3 --device cuda:0 --headless --frame-number -1
 ```
 
-**Exp 4: CenterPoint**
+**Exp 3: NuScenes PointPillars**
 
 ```bash
-env -u DISPLAY python simple_infer_main.py --dataset nuscenes --dataroot data/nuscenes --ann-file nuscenes_infos_val.pkl --config checkpoints/centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py --checkpoint checkpoints/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth --out-dir results/nuscenes_cp --data-source custom --nus-version v1.0-mini --no-open3d --max-samples -1 --eval
+env -u DISPLAY python mmdetection3d/simple_infer_main.py --dataset nuscenes --dataroot mmdetection3d/data/nuscenes --ann-file nuscenes_infos_val.pkl --config mmdetection3d/checkpoints/pointpillars_hv_secfpn_sbn-all_8xb4-2x_nus-3d.py --checkpoint mmdetection3d/checkpoints/hv_pointpillars_secfpn_sbn-all_4x8_2x_nus-3d_20210826_225857-f19d00a3.pth --out-dir mmdetection3d/results/nuscenes_pp --data-source custom --nus-version v1.0-mini --no-open3d --max-samples -1 --eval
+```
+
+**Exp 4: NuScenes CenterPoint**
+
+```bash
+env -u DISPLAY python mmdetection3d/simple_infer_main.py --dataset nuscenes --dataroot mmdetection3d/data/nuscenes --ann-file nuscenes_infos_val.pkl --config mmdetection3d/checkpoints/centerpoint_voxel01_second_secfpn_head-circlenms_8xb4-cyclic-20e_nus-3d.py --checkpoint mmdetection3d/checkpoints/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth --out-dir mmdetection3d/results/nuscenes_cp --data-source custom --nus-version v1.0-mini --no-open3d --max-samples -1 --eval
 ```
